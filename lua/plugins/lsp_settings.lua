@@ -50,8 +50,36 @@ return {
         ruff_lsp = {},
         rust_analyzer = {},
         taplo = {},
-        tinymist = {},
+        tinymist = {
+          settings = {
+            formatterMode = "typstyle",
+          },
+        },
       },
     },
+  },
+
+  {
+    "NvChad/nvim-colorizer.lua",
+    opts = {
+      user_default_options = {
+        tailwind = true,
+      },
+    },
+  },
+
+  {
+    "hrsh7th/nvim-cmp",
+    dependecies = {
+      { "roobert/tailwindcss-colorizer-cmp.nvim", config = true },
+    },
+    opts = function(_, opts)
+      -- original LazyVim kind icon formatter
+      local format_kinds = opts.formatting.format
+      opts.formatting.format = function(entry, item)
+        format_kinds(entry, item) -- add icons
+        return require("tailwindcss-colorizer-cmp").formatter(entry, item)
+      end
+    end,
   },
 }
