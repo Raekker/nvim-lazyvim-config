@@ -1,3 +1,6 @@
+vim.filetype.add({
+  pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
+})
 return {
   {
     "nvim-treesitter/nvim-treesitter",

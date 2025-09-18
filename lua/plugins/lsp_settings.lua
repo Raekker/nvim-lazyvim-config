@@ -18,6 +18,7 @@ return {
           filetypes = {
             "html",
             "templ",
+            "heex",
           },
         },
 
@@ -25,15 +26,10 @@ return {
           filetypes = {
             "html",
             "templ",
+            "heex",
           },
         },
 
-        tailwindcss = {
-          filetypes = {
-            "html",
-            "templ",
-          },
-        },
         gopls = {
           filetypes = {
             "go",
@@ -64,6 +60,8 @@ return {
     opts = {
       user_default_options = {
         tailwind = true,
+        rgb_fn = true,
+        hsl_fn = true,
       },
     },
   },
