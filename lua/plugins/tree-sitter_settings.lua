@@ -1,5 +1,9 @@
 vim.filetype.add({
   pattern = { [".*/hypr/.*%.conf"] = "hyprlang" },
+  extension = {
+    heex = "heex",
+    eex = "heex",
+  },
 })
 return {
   {
@@ -42,7 +46,10 @@ return {
         "diff",
         "fish",
         "git_config",
+        "eex",
+        "heex",
       },
+      highlight = { enable = true },
     },
   },
 }

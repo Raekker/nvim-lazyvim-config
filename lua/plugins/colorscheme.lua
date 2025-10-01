@@ -138,13 +138,21 @@ return {
     },
   },
   {
+    "b0o/lavi.nvim",
+    dependencies = { "rktjmp/lush.nvim" },
+    config = function()
+      vim.cmd([[colorscheme lavi]])
+    end,
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
       -- colorscheme = "catppuccin-mocha",
       -- colorscheme = "catppuccin",
       -- colorscheme = "oxocarbon",
       -- colorscheme = "eldritch-dark",
-      colorscheme = "eldritch",
+      -- colorscheme = "eldritch",
+      colorscheme = "lavi",
       -- colorscheme = "fluoromachine",
       -- colorscheme = "tokyonight-storm",
       -- colorscheme = "tokyonight",
